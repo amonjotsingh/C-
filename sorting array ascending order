@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+int arr[]={21,54,97,90,50,40};
+int i,j;
+for(j=0;j<6;j++){
+
+for(i=j;i<6;i++)
+{
+	if(arr[j]>=arr[i])
+	{
+		int temp;
+		temp=arr[i];
+		arr[i]=arr[j];
+		arr[j]=temp;
+	}
+
+}
+}
+int k;
+printf("sorted array is [");
+for(k=0;k<6;k++){
+printf("%d ",arr[k]);
+}
+printf("]");
+return 0;
+}
