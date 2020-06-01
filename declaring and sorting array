@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main()
+{
+int a;
+printf("enter the no of elements you want to enter in array");
+scanf("%d",&a);
+int arr[a];
+int b;
+printf("enter elements of array");
+for(b=0;b<a;b++){
+int c;
+scanf("%d",&c);
+arr[b]=c;
+}
+int check;
+printf("press '1' if you want an array in ascending order and press '0' if want array in descending order ");
+scanf("%d",&check);
+
+if(check==1)
+{
+int i,j;
+for(i=0;i<a;i++){
+for(j=0;j<i;j++){
+if(arr[i]<=arr[j])
+{ int temp;
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}
+}
+
+}
+printf("array in ascending order is:");
+int d;
+for(d=0;d<a;d++)
+printf("%d ",arr[d]);
+}
+if(check==0)
+{
+int i,j;
+for(i=0;i<a;i++){
+for(j=0;j<i;j++){
+if(arr[i]>=arr[j])
+{ int temp;
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}
+}
+
+}
+printf("array in descending order is:");
+int d;
+for(d=0;d<a;d++)
+printf("%d ",arr[d]);
+}
+return 0;
+}
