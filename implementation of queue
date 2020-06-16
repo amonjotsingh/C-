@@ -1,0 +1,74 @@
+#include <stdlib.h> //HEADER FILES
+#include <stdbool.h>
+#include <stdio.h>
+#define L 1024 // size of integer data structure
+// global variable initializing
+int s[L]; // stack storage
+size_t q_tail = 0 ; // the stack "pointer", q_tail, valid from 1 to
+L;
+size_t q_head = 0 ; // the stack "pointer", q_tail valid from 1 to L
+// (q_tail=q_head) means queue is empty
+bool queue_empty ( void ) //func to check if queue is empty
+{
+bool result; //initializing result variable
+if (q_tail == q_head)
+{
+result = true ;
+}
+else
+{
+result = false ;
+}
+return result; //returning true or false
+}
+void enqueuing ( int x) //pushing values in queue
+{
+if (q_tail>=q_head)
+{
+s[++q_tail - 1 ] = x;
+// increment q_tail, then moving to next location
+}
+return ;
+}
+int dequeuing ( void ) //function to pull values out of queue
+{
+if (queue_empty()) //checking if queue is empty
+{
+printf ( "underflow error\n" );
+exit (EXIT_FAILURE);
+}
+else
+{
+return s[++q_head - 1 ];
+// return value at q_tail location, decrement q_tail
+}
+}
+int main () //MAIN CODE
+{
+//initializing array
+int loadarr[] =
+{ 52 , -29 , 36 , -821 , 790 , -650 , 1125 , 72 , 0 , 68 , 33 , 59 };
+//calculating size of array
+size_t N = sizeof (loadarr) / sizeof ( int );
+//printing contents of array
+printf ( "data to be loaded on to the stack:\n" );
+for ( size_t i = 0 ; i != N; ++i)
+{
+printf ( "%d " , loadarr[i]);
+}
+printf ( "\n" ); //prinitng next line
+//pushing array data into queue
+printf ( "pushing data onto queue...\n" );
+for ( size_t i = 0 ; i != N; ++i)
+{
+enqueuing (loadarr[i]);
+}
+//pulling data out of queue
+printf ( "pulling data off of queue...\n" );
+while (queue_empty() == false )
+{
+printf ( "%d " , dequeuing ());
+}
+// exit normally
+return EXIT_SUCCESS;
+}
