@@ -1,3 +1,5 @@
+
+/*CALLING AND PRINTING ADRESS OF FUNCTIONS CALLED*/
 #include<stdio.h>
 void foo1(int xval)
 {
