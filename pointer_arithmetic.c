@@ -1,3 +1,4 @@
+/*PERFORMING POINTER ARITHMETIC USING ARRAYS*/
 #include<stdio.h>
 int main()
 {
