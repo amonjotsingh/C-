@@ -1,3 +1,4 @@
+/*USING POINTER TO SWAP NUMBERS*/
 #include<stdio.h>
 int main()
 {
