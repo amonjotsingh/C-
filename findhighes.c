@@ -1,3 +1,4 @@
+/* declaring and finding highest number in an array */
 #include<stdio.h>
 int main()
 {
