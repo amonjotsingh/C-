@@ -1,3 +1,4 @@
+//calculating factorial using recursion
 #include<stdio.h>
 int rec (int n)
 {
