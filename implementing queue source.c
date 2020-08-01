@@ -20,7 +20,7 @@ bool queue_empty(queue_t *s)
 return false;
   }
 }
-*
+/*
 * push() implementation
 */
 void push(queue_t *s, int x)
