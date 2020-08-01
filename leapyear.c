@@ -1,3 +1,4 @@
+//check if the year is leap or not
 #include <stdio.h>
 #include <stdlib.h>
 
